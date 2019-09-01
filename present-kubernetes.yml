@@ -7,11 +7,11 @@ spec:
   - name: shared-data
     emptyDir: {}
   containers:
-  - name: present_verb_mysql
+  - name: present-verb-mysql
     image: emendez93/present_verb_mysql:0.1
     ports:
     - containerPort: 3306
   - name: present-verb-english-comando
-    image: emendez93/present-verb-english-comando:0.1
+    image: emendez93/present-verb-english-comando:0.3
     ports:
     - containerPort: 8080
