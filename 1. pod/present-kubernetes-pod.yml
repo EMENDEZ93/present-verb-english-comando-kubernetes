@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-volumes
+spec:
+  volumes:
+  - name: shared-data
+    emptyDir: {}
+  containers:
+  - name: present_verb_mysql
+    image: emendez93/present_verb_mysql:0.1
+    ports:
+    - containerPort: 3306
+  - name: present-verb-english-comando
+    image: emendez93/present-verb-english-comando:0.1
+    ports:
+    - containerPort: 8080
